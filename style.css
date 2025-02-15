@@ -1,0 +1,88 @@
+body {
+    background-color: #f3f4f6;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .value-goals-box {
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 64rem;
+    border: 1px solid #1d4ed8;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .value-goals-list {
+    color: #374151;
+    text-align: left;
+    margin-top: 1rem;
+  }
+  
+  .highlight {
+    color: #3b82f6;
+    font-weight: 600;
+  }
+  
+  .image-style {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mission-box {
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40rem;
+    border: 1px solid #1d4ed8;
+    border-radius: 0.5rem;
+    padding: 3rem;
+  }
+  
+  .mission-list {
+    color: #111827;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .brand-section {
+    margin-top: 2rem;
+  }
+  
+  .brand-philosophy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .brand-item {
+    width: 16rem;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon {
+    height: 6rem;
+    margin: 0 auto 1rem auto;
+  }
+  
+  .brand-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .brand-description {
+    color: #4b5563;
+    margin-top: 0.5rem;
+  }
+  
