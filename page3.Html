@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>착한가격업소</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex flex-col min-h-screen bg-gray-100 p-6">
+    <main class="flex-grow bg-white flex items-start justify-start">
+      <div class="max-w-5xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <div
+          class="relative mt-8 p-4 border border-gray-300 rounded-lg bg-white"
+        >
+          <p class="text-gray-800 text-lg font-semibold">
+            착한가격업소, 무엇이 더 궁금하신가요?
+          </p>
+          <p class="text-gray-500 text-sm mt-1">
+            전화상담을 원할 시 010-1111-1111으로 연락주세요.
+          </p>
+          <div class="flex justify-center space-x-4 mt-4">
+            <button
+              onclick="openModal('helpModal')"
+              class="flex items-center border border-gray-300 rounded-md px-4 py-2"
+            >
+              <span class="text-black text-lg">❓</span>
+              <span class="ml-2 text-gray-700">도움말</span>
+            </button>
+            <button
+              onclick="openModal('videoModal')"
+              class="flex items-center border border-gray-300 rounded-md px-4 py-2"
+            >
+              <span class="text-black text-lg">▶️</span>
+              <span class="ml-2 text-gray-700">영상보기</span>
+            </button>
+            <button
+              onclick="openModal('snsModal')"
+              class="flex items-center border border-gray-300 rounded-md px-4 py-2"
+            >
+              <span class="text-black text-lg">📷</span>
+              <span class="ml-2 text-gray-700">SNS</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      id="helpModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm">
+        <h2 class="text-lg font-semibold">도움말</h2>
+        <p class="text-gray-600 mt-2">
+          이곳에서 착한가격업소에 대한 정보를 확인하세요.
+        </p>
+        <button
+          onclick="closeModal('helpModal')"
+          class="mt-4 px-4 py-2 bg-gray-300 rounded-md"
+        >
+          닫기
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="videoModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm">
+        <h2 class="text-lg font-semibold">영상보기</h2>
+        <iframe
+          width="300"
+          height="200"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          allowfullscreen
+        ></iframe>
+        <button
+          onclick="closeModal('videoModal')"
+          class="mt-4 px-4 py-2 bg-gray-300 rounded-md"
+        >
+          닫기
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="snsModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm">
+        <h2 class="text-lg font-semibold">SNS</h2>
+        <p class="text-gray-600 mt-2">
+          착한가격업소 관련 SNS 소식을 확인하세요.
+        </p>
+        <button
+          onclick="closeModal('snsModal')"
+          class="mt-4 px-4 py-2 bg-gray-300 rounded-md"
+        >
+          닫기
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function openModal(id) {
+        document.getElementById(id).classList.remove("hidden");
+      }
+
+      function closeModal(id) {
+        document.getElementById(id).classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>
