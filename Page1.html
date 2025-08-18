@@ -1,81 +1,201 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>가치와 목표</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="bg-gray-100">
-    <div class="bg-white w-full">
-      <section class="text-center py-12">
-        <h2 class="section-title">우리의 가치와 목표</h2>
-        <div class="value-goals-box">
-          <ul class="value-goals-list">
-            <li>
-              창업부터 성장까지 필요한
-              <span class="highlight">정보</span>와
-              <span class="highlight">네트워크</span>를 제공하여
-              <span class="highlight">안정적인 운영</span>과
-              <span class="highlight">경쟁력 강화</span>를 지원합니다.
-            </li>
-            <li>
-              변화하는 시장에 맞게 유연한 전략을 세우고,
-              <span class="highlight">혁신</span>으로 지속 성장합니다.
-            </li>
-            <li>
-              <span class="highlight">투명한 운영과 정직한 소통</span>으로 신뢰를 구축하고 장기적인 관계를 형성합니다.
-            </li>
-          </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>가치와 목표</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* 글꼴/기본 레이아웃 보강(새 클래스를 추가하지 않고 글로벌만 최소 사용) */
+    body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+    a { text-decoration: none; color: #1d4ed8; }
+  </style>
+</head>
+<body>
+  <!-- =======================
+       Header
+  ======================== -->
+  <header style="position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:1px solid #e5e7eb;">
+    <div style="max-width:64rem;margin:0 auto;padding:0.75rem 1rem;display:flex;align-items:center;justify-content:space-between;">
+      <a href="/" aria-label="홈으로" style="display:flex;align-items:center;gap:0.5rem;color:#111827;font-weight:800;">
+        <div style="width:32px;height:32px;border:2px solid #1d4ed8;border-radius:8px;display:grid;place-items:center;">
+          <span style="color:#1d4ed8;font-weight:800;">S</span>
         </div>
-      </section>
-
-      <section class="image-section">
-        <div class="max-w-4xl mx-auto">
-          <!-- <img src="https://private-user-images.githubusercontent.com/69082332/413516699-0de4d7a2-419d-47f4-8013-5fbe9b194559.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzk2MDEwOTUsIm5iZiI6MTczOTYwMDc5NSwicGF0aCI6Ii82OTA4MjMzMi80MTM1MTY2OTktMGRlNGQ3YTItNDE5ZC00N2Y0LTgwMTMtNWZiZTliMTk0NTU5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMTUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjE1VDA2MjYzNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWJmZTgwYWQ1MmFlMmZmYTQxMmQ0NTUyNTgwODhmZDJlMzYxYmI5ZWNjYWJmMDQzZDIwMmI0MzlkYzZlNGJjZGYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.YI7Ty5VJ_Dm15MD4JlomMAsju1O3GiaCzOd43LzdjOw" alt="메인이미지"> -->
-          <!-- <img src="https://user-images.githubusercontent.com/1234567/abcdefg.png" alt="이미지 설명" />          ![메인이미지](https://github.com/sykblue/With-ipad/issues/1#issue-2855245369.png) -->
-          <!-- <img src="/img/mid.png" alt="팀 작업 이미지" class="image-style" /> -->
-        </div>
-      </section>
-
-      <section class="text-center py-12">
-        <h2 class="section-title">소상공인을 돕고, 소비자가 믿을 수 있게.</h2>
-        <div class="mission-box">
-          <ul class="mission-list">
-            <li>소상공인 지원 소상공인을 돕고 성장할 기회를 제공합니다.</li>
-            <li>소비자 신뢰 소비자가 믿고 찾을 수 있는 환경을 만듭니다.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="brand-section">
-        <h2 class="section-title">브랜드 철학</h2>
-        <div class="brand-philosophy">
-          <div class="brand-item">
-            <!-- <img src="/img/n1.png" class="icon" alt="시작과 목적" /> -->
-            <h3 class="brand-title">시작과 목적</h3>
-            <p class="brand-description">
-              착한 양소 솔루션은 소상공인을 돕고, 소비자가 믿고 찾을 수 있는 환경을 만들기 위해 시작되었습니다.
-            </p>
-          </div>
-
-          <div class="brand-item">
-            <!-- <img src="/img/n2.png" class="icon" alt="핵심 가치" /> -->
-            <h3 class="brand-title">핵심 가치</h3>
-            <p class="brand-description">
-              단순한 장소 추천을 넘어, 착한 소비 문화를 조성하며 지역 경제 활성화에 기여하고자 합니다.
-            </p>
-          </div>
-
-          <div class="brand-item">
-            <img src="/img/n3.png" class="icon" alt="앞으로의 목표" />
-            <h3 class="brand-title">앞으로의 목표</h3>
-            <p class="brand-description">
-              앞으로도 소상공인과 소비자가 함께 성장하는 지속 가능한 플랫폼으로 발전해 나가겠습니다.
-            </p>
-          </div>
-        </div>
-      </section>
+        <span>Service Name</span>
+      </a>
+      <nav aria-label="내비게이션" style="display:flex;gap:1rem;align-items:center;">
+        <a href="/index.html" style="color:#374151;">메인</a>
+        <a href="#values" style="color:#111827;font-weight:600;">가치·목표</a>
+        <a href="#mission" style="color:#374151;">미션</a>
+        <a href="#brand" style="color:#374151;">브랜드</a>
+        <a href="#contact" style="padding:0.4rem 0.9rem;border:1px solid #1d4ed8;border-radius:999px;color:#1d4ed8;font-weight:600;">문의</a>
+      </nav>
     </div>
-  </body>
+  </header>
+
+  <!-- =======================
+       Main
+  ======================== -->
+  <main role="main" style="padding:1rem 1rem 3rem 1rem;background-color:#f3f4f6;">
+    <!-- 히어로/타이틀 -->
+    <section style="max-width:64rem;margin:1.5rem auto 0 auto;">
+      <h1 class="section-title" style="font-size:2rem;line-height:1.2;margin-bottom:0.25rem;">
+        우리의 가치와 목표
+      </h1>
+      <p style="text-align:center;color:#4b5563;margin-top:0.25rem;">
+        소상공인과 소비자가 함께 성장하는 생태계를 위해, 본질에 집중합니다.
+      </p>
+    </section>
+
+    <!-- 가치와 목표 -->
+    <section id="values" style="max-width:64rem;margin:1rem auto 0 auto;">
+      <div class="value-goals-box">
+        <ul class="value-goals-list">
+          <li>
+            창업부터 성장까지 필요한
+            <span class="highlight">정보</span>와
+            <span class="highlight">네트워크</span>를 제공하여
+            <span class="highlight">안정적인 운영</span>과
+            <span class="highlight">경쟁력 강화</span>를 지원합니다.
+          </li>
+          <li>
+            변화하는 시장에 맞게 유연한 전략을 세우고,
+            <span class="highlight">혁신</span>으로 지속 성장합니다.
+          </li>
+          <li>
+            <span class="highlight">투명한 운영과 정직한 소통</span>으로 신뢰를 구축하고 장기적인 관계를 형성합니다.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 이미지 섹션 -->
+    <section aria-labelledby="image-title" style="max-width:64rem;margin:2rem auto 0 auto;">
+      <h2 id="image-title" class="section-title">현장과 연결된 지원</h2>
+      <figure style="margin:1rem 0;">
+        <!-- 실제 이미지가 준비되면 아래 SVG를 <img class="image-style" src="/img/mid.png" alt="팀 작업 이미지"> 로 교체하세요 -->
+        <svg class="image-style" viewBox="0 0 1200 540" role="img" aria-label="팀 작업 이미지" style="width:100%;height:auto;">
+          <defs>
+            <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#dbeafe"/>
+              <stop offset="100%" stop-color="#bfdbfe"/>
+            </linearGradient>
+          </defs>
+          <rect width="1200" height="540" rx="16" fill="url(#grad)"/>
+          <rect x="60" y="60" width="1080" height="84" rx="12" fill="#ffffff" opacity="0.9"/>
+          <rect x="60" y="164" width="300" height="316" rx="16" fill="#ffffff" opacity="0.9"/>
+          <rect x="380" y="164" width="760" height="150" rx="16" fill="#ffffff" opacity="0.9"/>
+          <rect x="380" y="334" width="760" height="146" rx="16" fill="#ffffff" opacity="0.9"/>
+        </svg>
+        <figcaption style="text-align:center;color:#6b7280;margin-top:0.5rem;">
+          샘플 이미지(플레이스홀더). 실제 스크린샷/사진으로 교체 가능합니다.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- 미션 -->
+    <section id="mission" style="max-width:64rem;margin:2rem auto 0 auto;">
+      <h2 class="section-title">소상공인을 돕고, 소비자가 믿을 수 있게.</h2>
+      <div class="mission-box">
+        <ul class="mission-list" style="list-style:none;padding:0;margin:0;">
+          <li><span class="highlight">소상공인 지원</span> — 현장의 문제를 해결하고 성장 기회를 제공합니다.</li>
+          <li><span class="highlight">소비자 신뢰</span> — 믿고 찾을 수 있는 투명한 환경을 만듭니다.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 브랜드 철학 -->
+    <section id="brand" class="brand-section" style="max-width:64rem;margin:2rem auto 0 auto;">
+      <h2 class="section-title">브랜드 철학</h2>
+      <div class="brand-philosophy" style="padding:0 0.5rem;">
+        <!-- 시작과 목적 -->
+        <article class="brand-item">
+          <!-- 아이콘: 인라인 SVG (외부 자원 없이 표시) -->
+          <svg class="icon" viewBox="0 0 96 96" role="img" aria-label="시작과 목적">
+            <circle cx="48" cy="48" r="40" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
+            <path d="M30 50l12 12 24-24" fill="none" stroke="#1d4ed8" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+          <h3 class="brand-title">시작과 목적</h3>
+          <p class="brand-description">
+            착한 양소 솔루션은 소상공인을 돕고, 소비자가 믿고 찾을 수 있는 환경을 만들기 위해 시작되었습니다.
+          </p>
+        </article>
+
+        <!-- 핵심 가치 -->
+        <article class="brand-item">
+          <svg class="icon" viewBox="0 0 96 96" role="img" aria-label="핵심 가치">
+            <rect x="16" y="20" width="64" height="56" rx="10" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
+            <line x1="28" y1="36" x2="68" y2="36" stroke="#1d4ed8" stroke-width="5" stroke-linecap="round"/>
+            <line x1="28" y1="52" x2="52" y2="52" stroke="#1d4ed8" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+          <h3 class="brand-title">핵심 가치</h3>
+          <p class="brand-description">
+            단순한 장소 추천을 넘어, 착한 소비 문화를 조성하며 지역 경제 활성화에 기여하고자 합니다.
+          </p>
+        </article>
+
+        <!-- 앞으로의 목표 -->
+        <article class="brand-item">
+          <svg class="icon" viewBox="0 0 96 96" role="img" aria-label="앞으로의 목표">
+            <path d="M16 72h64" stroke="#1d4ed8" stroke-width="4" stroke-linecap="round"/>
+            <path d="M24 72V40l24-16 24 16v32" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
+            <circle cx="48" cy="52" r="8" fill="#1d4ed8" opacity="0.9"/>
+          </svg>
+          <h3 class="brand-title">앞으로의 목표</h3>
+          <p class="brand-description">
+            소상공인과 소비자가 함께 성장하는 지속 가능한 플랫폼으로 발전해 나가겠습니다.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 문의/CTA -->
+    <section id="contact" style="max-width:40rem;margin:2rem auto 0 auto;">
+      <h2 class="section-title">문의하기</h2>
+      <div class="mission-box" style="padding:2rem;">
+        <p class="mission-list" style="margin:0;">
+          파트너십·제휴·베타 테스트 문의: <span class="highlight">contact@example.com</span>
+        </p>
+        <form onsubmit="event.preventDefault(); alert('문의가 접수되었습니다. 곧 연락드릴게요!');"
+              style="display:flex;gap:0.5rem;margin-top:1rem;justify-content:center;flex-wrap:wrap;">
+          <input type="email" required placeholder="이메일 주소"
+                 style="flex:1 1 16rem;min-width:16rem;padding:0.75rem 0.9rem;border:1px solid #93c5fd;border-radius:0.5rem;outline:none;" />
+          <button type="submit"
+                  style="padding:0.75rem 1rem;border-radius:0.5rem;background:#1d4ed8;color:#fff;font-weight:700;border:none;">
+            보내기
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- =======================
+       Footer
+  ======================== -->
+  <footer style="border-top:1px solid #e5e7eb;background:#ffffff;">
+    <div style="max-width:64rem;margin:0 auto;padding:1.25rem 1rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between;">
+      <small style="color:#6b7280;">© <span id="year"></span> Service Name. All rights reserved.</small>
+      <div style="display:flex;gap:1rem;">
+        <a href="/terms.html" style="color:#374151;">이용약관</a>
+        <a href="/privacy.html" style="color:#374151;">개인정보처리방침</a>
+        <a href="#contact" style="color:#374151;">문의하기</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 섹션 앵커 부드러운 스크롤
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id.length > 1) {
+          e.preventDefault();
+          document.querySelector(id)?.scrollIntoView({ behavior:'smooth', block:'start' });
+        }
+      });
+    });
+  </script>
+</body>
 </html>
