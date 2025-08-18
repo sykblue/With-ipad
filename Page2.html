@@ -1,135 +1,182 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>검색 가이드</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen p-8">
-    <div class="max-w-6xl mx-auto">
-      <div class="mb-12 relative">
-        <div
-          class="absolute top-1/2 left-0 w-full h-1 bg-gray-200 transform -translate-y-1/2"
-        ></div>
-        <div class="flex justify-between">
-          <div class="relative z-10">
-            <div
-              class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg"
-            >
-              1
-            </div>
-            <p class="mt-2 text-sm font-semibold text-blue-600">검색 가이드</p>
-          </div>
-          <div class="relative z-10">
-            <div
-              class="w-10 h-10 bg-white border-4 border-gray-300 rounded-full flex items-center justify-center text-gray-400 font-bold shadow-sm"
-            >
-              2
-            </div>
-            <p class="mt-2 text-sm text-gray-500">리뷰 가이드</p>
-          </div>
-          <div class="relative z-10">
-            <div
-              class="w-10 h-10 bg-white border-4 border-gray-300 rounded-full flex items-center justify-center text-gray-400 font-bold shadow-sm"
-            >
-              3
-            </div>
-            <p class="mt-2 text-sm text-gray-500">공지사항</p>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>검색 가이드</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* 글로벌 보강(새 클래스 최소화) */
+    body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+    a { text-decoration: none; color:#1d4ed8; }
+  </style>
+</head>
+<body>
+  <!-- =======================
+       Header
+  ======================== -->
+  <header style="position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:1px solid #e5e7eb;">
+    <div style="max-width:64rem;margin:0 auto;padding:0.75rem 1rem;display:flex;align-items:center;justify-content:space-between;">
+      <a href="/index.html" aria-label="홈으로" style="display:flex;align-items:center;gap:0.5rem;color:#111827;font-weight:800;">
+        <div style="width:32px;height:32px;border:2px solid #1d4ed8;border-radius:8px;display:grid;place-items:center;">
+          <span style="color:#1d4ed8;font-weight:800;">S</span>
+        </div>
+        <span>Service Name</span>
+      </a>
+      <nav aria-label="내비게이션" style="display:flex;gap:1rem;align-items:center;">
+        <a href="#search" style="color:#374151;">검색</a>
+        <a href="#reviews" style="color:#374151;">이용후기</a>
+        <a href="#notice" style="color:#374151;">공지사항</a>
+        <a href="/values.html" style="padding:0.4rem 0.9rem;border:1px solid #1d4ed8;border-radius:999px;color:#1d4ed8;font-weight:600;">가치·목표</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =======================
+       Main
+  ======================== -->
+  <main role="main" style="padding:1rem 1rem 3rem 1rem;background-color:#f3f4f6;">
+
+    <!-- 상단 스텝 인디케이터 -->
+    <section style="max-width:64rem;margin:1.5rem auto 2rem auto;position:relative;">
+      <div style="position:absolute;left:0;right:0;top:50%;height:4px;background:#e5e7eb;transform:translateY(-50%);"></div>
+      <div style="display:flex;justify-content:space-between;position:relative;">
+        <!-- Step 1: 활성 -->
+        <div style="text-align:center;position:relative;z-index:1;">
+          <div style="width:40px;height:40px;border-radius:999px;background:#1d4ed8;color:#fff;
+                      display:flex;align-items:center;justify-content:center;font-weight:800;
+                      box-shadow:0 8px 20px rgba(29,78,216,.25);">1</div>
+          <p style="margin-top:0.5rem;font-size:0.9rem;font-weight:700;color:#1d4ed8;">검색 가이드</p>
+        </div>
+        <!-- Step 2 -->
+        <div style="text-align:center;position:relative;z-index:1;">
+          <div style="width:40px;height:40px;border-radius:999px;background:#ffffff;border:4px solid #d1d5db;color:#9ca3af;
+                      display:flex;align-items:center;justify-content:center;font-weight:800;box-shadow:0 2px 6px rgba(0,0,0,.05);">2</div>
+          <p style="margin-top:0.5rem;font-size:0.9rem;color:#6b7280;">리뷰 가이드</p>
+        </div>
+        <!-- Step 3 -->
+        <div style="text-align:center;position:relative;z-index:1;">
+          <div style="width:40px;height:40px;border-radius:999px;background:#ffffff;border:4px solid #d1d5db;color:#9ca3af;
+                      display:flex;align-items:center;justify-content:center;font-weight:800;box-shadow:0 2px 6px rgba(0,0,0,.05);">3</div>
+          <p style="margin-top:0.5rem;font-size:0.9rem;color:#6b7280;">공지사항</p>
         </div>
       </div>
+    </section>
 
-      <section class="mb-16">
-        <div class="flex items-center mb-6">
-          <div class="w-3 h-8 bg-blue-600 rounded-full mr-4"></div>
-          <h2 class="text-3xl font-bold text-gray-800">검색</h2>
-        </div>
-        <div
-          class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
-        >
-          <div class="flex items-start space-x-6">
-            <div
-              class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-2xl"
-            >
-              🔍
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold mb-2">스마트 검색 기능</h3>
-              <p class="text-gray-600 leading-relaxed">
-                키워드 검색과 필터링을 조합하여 원하는 업소를 빠르게 찾아보세요.
-                실시간 인기 검색어와 추천 검색어로 더 편리한 검색이 가능합니다.
-              </p>
-            </div>
-          </div>
-          <img
-            src="/img/Main3-2 img.png"
-            alt="검색 인터페이스"
-            class="mt-8 rounded-xl border-8 border-white shadow-md hover:scale-[1.01] transition-transform"
-          />
-        </div>
-      </section>
+    <!-- 검색 -->
+    <section id="search" style="max-width:64rem;margin:0 auto 2rem auto;">
+      <div style="display:flex;align-items:center;margin-bottom:0.75rem;">
+        <div style="width:8px;height:28px;background:#1d4ed8;border-radius:999px;margin-right:12px;"></div>
+        <h2 class="section-title" style="text-align:left;font-size:1.75rem;">검색</h2>
+      </div>
 
-      <section class="mb-16">
-        <div class="flex items-center mb-6">
-          <div class="w-3 h-8 bg-green-600 rounded-full mr-4"></div>
-          <h2 class="text-3xl font-bold text-gray-800">이용후기</h2>
-        </div>
-        <div
-          class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
-        >
-          <div class="flex items-start space-x-6">
-            <div
-              class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-2xl"
-            >
-              ✍️
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold mb-2">생생한 리뷰 시스템</h3>
-              <p class="text-gray-600 leading-relaxed">
-                실제 고객들의 솔직한 평가를 확인하고, 여러분의 경험도
-                공유해보세요. 사진 리뷰와 별점 시스템으로 더욱 신뢰할 수 있는
-                정보를 제공합니다.
-              </p>
-            </div>
+      <div style="background:#ffffff;border-radius:16px;padding:1.5rem;box-shadow:0 14px 44px rgba(15,23,42,.10);">
+        <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+          <div style="width:56px;height:56px;background:#dbeafe;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">🔍</div>
+          <div style="flex:1 1 20rem;min-width:20rem;">
+            <h3 style="margin:0 0 0.25rem 0;font-size:1.1rem;font-weight:700;color:#111827;">스마트 검색 기능</h3>
+            <p style="margin:0;color:#4b5563;line-height:1.7;">
+              키워드 검색과 필터링을 조합하여 원하는 업소를 빠르게 찾아보세요.
+              실시간 인기 검색어와 추천 검색어로 더 편리한 검색이 가능합니다.
+            </p>
           </div>
-          <img
-            src="/img/Main3-1img.png"
-            alt="리뷰 인터페이스"
-            class="mt-8 rounded-xl border-8 border-white shadow-md hover:scale-[1.01] transition-transform"
-          />
         </div>
-      </section>
 
-      <section>
-        <div class="flex items-center mb-6">
-          <div class="w-3 h-8 bg-purple-600 rounded-full mr-4"></div>
-          <h2 class="text-3xl font-bold text-gray-800">공지사항</h2>
-        </div>
-        <div
-          class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
-        >
-          <div class="flex items-start space-x-6">
-            <div
-              class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-2xl"
-            >
-              📢
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold mb-2">실시간 공지 알림</h3>
-              <p class="text-gray-600 leading-relaxed">
-                중요한 업데이트와 공지사항을 가장 먼저 확인하세요. 푸시 알림
-                기능으로 놓치는 정보 없이 편리하게 이용할 수 있습니다.
-              </p>
-            </div>
+        <!-- 이미지 (파일명에 공백이 있다면 %20으로 인코딩) -->
+        <img
+          class="image-style"
+          src="/img/Main3-2%20img.png"
+          alt="검색 인터페이스"
+          style="margin-top:1rem;border:8px solid #ffffff;display:block;width:100%;height:auto;"
+        />
+      </div>
+    </section>
+
+    <!-- 이용후기 -->
+    <section id="reviews" style="max-width:64rem;margin:0 auto 2rem auto;">
+      <div style="display:flex;align-items:center;margin-bottom:0.75rem;">
+        <div style="width:8px;height:28px;background:#16a34a;border-radius:999px;margin-right:12px;"></div>
+        <h2 class="section-title" style="text-align:left;font-size:1.75rem;">이용후기</h2>
+      </div>
+
+      <div style="background:#ffffff;border-radius:16px;padding:1.5rem;box-shadow:0 14px 44px rgba(15,23,42,.10);">
+        <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+          <div style="width:56px;height:56px;background:#dcfce7;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">✍️</div>
+          <div style="flex:1 1 20rem;min-width:20rem;">
+            <h3 style="margin:0 0 0.25rem 0;font-size:1.1rem;font-weight:700;color:#111827;">생생한 리뷰 시스템</h3>
+            <p style="margin:0;color:#4b5563;line-height:1.7;">
+              실제 고객들의 솔직한 평가를 확인하고, 여러분의 경험도 공유해보세요.
+              사진 리뷰와 별점 시스템으로 더욱 신뢰할 수 있는 정보를 제공합니다.
+            </p>
           </div>
-          <img
-            src="/img/Main3-3 img.png"
-            alt="공지사항 인터페이스"
-            class="mt-8 rounded-xl border-8 border-white shadow-md hover:scale-[1.01] transition-transform"
-          />
         </div>
-      </section>
+
+        <img
+          class="image-style"
+          src="/img/Main3-1img.png"
+          alt="리뷰 인터페이스"
+          style="margin-top:1rem;border:8px solid #ffffff;display:block;width:100%;height:auto;"
+        />
+      </div>
+    </section>
+
+    <!-- 공지사항 -->
+    <section id="notice" style="max-width:64rem;margin:0 auto;">
+      <div style="display:flex;align-items:center;margin-bottom:0.75rem;">
+        <div style="width:8px;height:28px;background:#7c3aed;border-radius:999px;margin-right:12px;"></div>
+        <h2 class="section-title" style="text-align:left;font-size:1.75rem;">공지사항</h2>
+      </div>
+
+      <div style="background:#ffffff;border-radius:16px;padding:1.5rem;box-shadow:0 14px 44px rgba(15,23,42,.10);">
+        <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+          <div style="width:56px;height:56px;background:#ede9fe;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">📢</div>
+          <div style="flex:1 1 20rem;min-width:20rem;">
+            <h3 style="margin:0 0 0.25rem 0;font-size:1.1rem;font-weight:700;color:#111827;">실시간 공지 알림</h3>
+            <p style="margin:0;color:#4b5563;line-height:1.7;">
+              중요한 업데이트와 공지사항을 가장 먼저 확인하세요. 푸시 알림 기능으로
+              놓치는 정보 없이 편리하게 이용할 수 있습니다.
+            </p>
+          </div>
+        </div>
+
+        <img
+          class="image-style"
+          src="/img/Main3-3%20img.png"
+          alt="공지사항 인터페이스"
+          style="margin-top:1rem;border:8px solid #ffffff;display:block;width:100%;height:auto;"
+        />
+      </div>
+    </section>
+  </main>
+
+  <!-- =======================
+       Footer
+  ======================== -->
+  <footer style="border-top:1px solid #e5e7eb;background:#ffffff;margin-top:2rem;">
+    <div style="max-width:64rem;margin:0 auto;padding:1.25rem 1rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between;">
+      <small style="color:#6b7280;">© <span id="year"></span> Service Name. All rights reserved.</small>
+      <div style="display:flex;gap:1rem;">
+        <a href="/terms.html" style="color:#374151;">이용약관</a>
+        <a href="/privacy.html" style="color:#374151;">개인정보처리방침</a>
+        <a href="#notice" style="color:#374151;">공지사항</a>
+      </div>
     </div>
-  </body>
+  </footer>
+
+  <script>
+    // 연도 표기
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 앵커 부드러운 스크롤
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id.length > 1) {
+          e.preventDefault();
+          document.querySelector(id)?.scrollIntoView({ behavior:'smooth', block:'start' });
+        }
+      });
+    });
+  </script>
+</body>
 </html>
