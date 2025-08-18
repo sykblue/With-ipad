@@ -4,135 +4,280 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>서비스 메인</title>
-  <!-- 주신 CSS 파일 경로로 변경하세요 -->
+  <!-- 주신 CSS를 이 파일명으로 저장해 링크하세요 -->
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* 페이지 완성도를 위한 최소한의 보강(새 클래스 추가 없음) */
+    body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+    a { text-decoration: none; }
+  </style>
 </head>
 <body>
-  <header style="max-width:64rem;margin:1.5rem auto 0.5rem auto;">
-    <h1 class="section-title" style="margin-bottom:0.25rem;">서비스 이름</h1>
-    <p style="text-align:center;color:#4b5563;">아이패드에서 깔끔하게 보이는 간단한 랜딩 페이지</p>
+  <!-- =======================
+       Header (고정 내비게이션)
+  ======================== -->
+  <header style="position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:1px solid #e5e7eb;">
+    <div style="max-width:64rem;margin:0 auto;padding:0.75rem 1rem;display:flex;align-items:center;justify-content:space-between;">
+      <!-- 로고 -->
+      <a href="#" aria-label="홈으로" style="display:flex;align-items:center;gap:0.5rem;color:#111827;font-weight:800;">
+        <div style="width:32px;height:32px;border:2px solid #1d4ed8;border-radius:8px;display:grid;place-items:center;">
+          <span style="color:#1d4ed8;font-weight:800;">S</span>
+        </div>
+        <span>Service Name</span>
+      </a>
+      <!-- 내비 -->
+      <nav aria-label="주요 메뉴" style="display:flex;align-items:center;gap:1rem;">
+        <a href="#features" style="color:#374151;">특징</a>
+        <a href="#values" style="color:#374151;">가치</a>
+        <a href="#mission" style="color:#374151;">미션</a>
+        <a href="#brand" style="color:#374151;">브랜드</a>
+        <a href="#contact" style="color:#374151;">문의</a>
+        <a href="#cta" style="padding:0.5rem 0.9rem;border:1px solid #1d4ed8;border-radius:999px;color:#1d4ed8;font-weight:600;">베타 신청</a>
+      </nav>
+    </div>
   </header>
 
-  <main style="padding:0 1rem 3rem 1rem;">
-    <!-- HERO 영역 -->
-    <section aria-labelledby="hero-title" style="max-width:64rem;margin:0 auto;">
-      <h2 id="hero-title" class="section-title">당신의 일상을 더 <span class="highlight">간단하게</span></h2>
+  <!-- =======================
+       Main
+  ======================== -->
+  <main role="main" style="padding:1rem 1rem 3rem 1rem;">
 
-      <!-- 외부 이미지를 아직 정하지 않으셨다면, 아래 SVG 플레이스홀더 그대로 쓰세요 -->
-      <figure style="margin:1rem 0;">
-        <svg class="image-style" viewBox="0 0 1200 540" role="img" aria-label="서비스 소개 이미지" style="width:100%;height:auto;">
-          <defs>
-            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#dbeafe"/>
-              <stop offset="100%" stop-color="#bfdbfe"/>
-            </linearGradient>
-          </defs>
-          <rect x="0" y="0" width="1200" height="540" fill="url(#g)"/>
-          <g fill="#1d4ed8">
-            <circle cx="220" cy="270" r="90" opacity="0.25"/>
-            <circle cx="420" cy="270" r="90" opacity="0.25"/>
-            <circle cx="620" cy="270" r="90" opacity="0.25"/>
-            <circle cx="820" cy="270" r="90" opacity="0.25"/>
-            <circle cx="1020" cy="270" r="90" opacity="0.25"/>
-          </g>
-          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
-                font-size="40" fill="#1f2937">여기에 서비스 핵심 스크린샷/배너를 넣어주세요</text>
-        </svg>
-        <figcaption style="text-align:center;color:#6b7280;margin-top:0.5rem;">
-          샘플 이미지(플레이스홀더). 실제 이미지를 넣을 땐 <code>&lt;img class="image-style" src="..."/></code>로 교체하세요.
-        </figcaption>
-      </figure>
-    </section>
+    <!-- HERO -->
+    <section id="hero" aria-labelledby="hero-title" style="max-width:64rem;margin:1.25rem auto 0 auto;">
+      <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:center;justify-content:space-between;">
+        <div style="flex:1 1 22rem;min-width:22rem;">
+          <h1 id="hero-title" class="section-title" style="text-align:left;font-size:2rem;line-height:1.2;">
+            아이패드에서 완벽한 <span class="highlight">하이파이 경험</span>
+          </h1>
+          <p style="margin-top:0.75rem;color:#4b5563;font-size:1rem;line-height:1.7;">
+            노이즈 없이 본질에 집중한 인터페이스. 주어진 작업을 더 빠르고, 더 쉽게 끝내세요.
+            주신 CSS 컴포넌트만으로도 충분히 고급스러운 레이아웃을 구현했습니다.
+          </p>
 
-    <!-- 가치/목표 -->
-    <section aria-labelledby="value-title" style="margin-top:2rem;">
-      <h2 id="value-title" class="section-title">우리의 가치와 목표</h2>
+          <!-- CTA 버튼 -->
+          <div style="display:flex;gap:0.75rem;margin-top:1rem;">
+            <a id="cta" href="#contact"
+               style="display:inline-block;padding:0.75rem 1.1rem;border-radius:0.75rem;
+                      background:linear-gradient(135deg,#3b82f6,#1d4ed8);color:#fff;font-weight:700;">
+              지금 시작하기
+            </a>
+            <a href="#features"
+               style="display:inline-block;padding:0.75rem 1.1rem;border-radius:0.75rem;
+                      border:1px solid #1d4ed8;color:#1d4ed8;font-weight:700;background:#fff;">
+              기능 살펴보기
+            </a>
+          </div>
 
-      <div class="value-goals-box">
-        <p style="text-align:center;color:#374151;">
-          우리는 <span class="highlight">간편함</span>과 <span class="highlight">신뢰</span>, 그리고
-          <span class="highlight">접근성</span>을 가장 중요하게 생각합니다.
-        </p>
-        <ul class="value-goals-list">
-          <li>복잡한 과정을 줄이고, 핵심에 집중하는 <span class="highlight">간편한 경험</span></li>
-          <li>투명한 정책과 안정적인 서비스로 만드는 <span class="highlight">사용자 신뢰</span></li>
-          <li>누구나 쉽게 사용할 수 있도록 고려한 <span class="highlight">접근성</span>과 가이드</li>
-          <li>아이패드·모바일·데스크탑에서 자연스러운 <span class="highlight">반응형 레이아웃</span></li>
-        </ul>
+          <!-- 신뢰 배지(간단 통계) -->
+          <div style="display:flex;gap:0.75rem;margin-top:1rem;flex-wrap:wrap;">
+            <div class="brand-item" style="width:12rem;padding:0.75rem;">
+              <div class="brand-title">99.9%</div>
+              <div class="brand-description">안정적인 가동률</div>
+            </div>
+            <div class="brand-item" style="width:12rem;padding:0.75rem;">
+              <div class="brand-title">2분 내</div>
+              <div class="brand-description">온보딩 완료</div>
+            </div>
+            <div class="brand-item" style="width:12rem;padding:0.75rem;">
+              <div class="brand-title">A11y 우수</div>
+              <div class="brand-description">접근성 고려</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 히어로 비주얼 -->
+        <figure style="flex:1 1 28rem;min-width:24rem;margin:0;">
+          <svg class="image-style" viewBox="0 0 1200 780" role="img" aria-label="제품 스크린샷 프리뷰" style="width:100%;height:auto;">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#e0f2fe"/>
+                <stop offset="100%" stop-color="#bfdbfe"/>
+              </linearGradient>
+            </defs>
+            <rect width="1200" height="780" rx="24" fill="url(#g1)"/>
+            <!-- 상단 바 -->
+            <rect x="40" y="40" width="1120" height="64" rx="12" fill="#ffffff" opacity="0.9"/>
+            <!-- 좌측 패널 -->
+            <rect x="40" y="120" width="280" height="560" rx="16" fill="#ffffff" opacity="0.9"/>
+            <!-- 메인 패널 -->
+            <rect x="340" y="120" width="820" height="280" rx="16" fill="#ffffff" opacity="0.9"/>
+            <rect x="340" y="420" width="820" height="260" rx="16" fill="#ffffff" opacity="0.9"/>
+            <!-- 포커스 강조 -->
+            <rect x="370" y="150" width="360" height="80" rx="12" fill="#1d4ed8" opacity="0.12"/>
+            <rect x="370" y="470" width="540" height="80" rx="12" fill="#1d4ed8" opacity="0.12"/>
+          </svg>
+          <figcaption style="text-align:center;color:#6b7280;margin-top:0.5rem;">
+            샘플 미리보기(플레이스홀더). 실제 스크린샷으로 교체 가능.
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- 미션 -->
-    <section aria-labelledby="mission-title" style="margin-top:2rem;">
-      <h2 id="mission-title" class="section-title">미션</h2>
+    <!-- FEATURES / BRAND PHILOSOPHY -->
+    <section id="features" class="brand-section" aria-labelledby="brand-title" style="max-width:64rem;margin:2rem auto 0 auto;">
+      <h2 id="brand-title" class="section-title">한 눈에 보는 핵심 기능</h2>
+      <p style="text-align:center;color:#4b5563;margin-top:0.5rem;">
+        빠른 학습, 유려한 상호작용, 안정적인 성능까지—필수 요소만을 정교하게 담았습니다.
+      </p>
 
-      <div class="mission-box">
-        <p style="text-align:center;color:#111827;">
-          우리의 미션은 다음 한 문장으로 요약됩니다.
-        </p>
-        <ul class="mission-list" style="list-style:none;padding:0;">
-          <li><strong class="highlight">“사용자의 시간을 아끼는 최고의 기본 경험 제공”</strong></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 브랜드 철학 -->
-    <section class="brand-section" aria-labelledby="brand-title">
-      <h2 id="brand-title" class="section-title">브랜드 철학</h2>
-
-      <div class="brand-philosophy" style="padding:0 0.5rem;">
-        <!-- 카드 1: 신뢰 -->
+      <div class="brand-philosophy" style="padding:0 0.5rem;margin-top:1.25rem;">
         <article class="brand-item">
-          <svg class="icon" viewBox="0 0 96 96" role="img" aria-label="신뢰 아이콘">
-            <path d="M48 10l28 10v20c0 19-12.3 36.2-28 40C32.3 76.2 20 59 20 40V20l28-10z"
-                  fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
-            <path d="M32 42l10 10 22-22" fill="none" stroke="#1d4ed8" stroke-width="5" stroke-linecap="round"/>
+          <svg class="icon" viewBox="0 0 96 96" role="img" aria-label="속도 아이콘">
+            <circle cx="48" cy="48" r="38" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
+            <path d="M28 60c12-8 28-8 40 0" stroke="#1d4ed8" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <circle cx="48" cy="48" r="6" fill="#1d4ed8"/>
           </svg>
-          <h3 class="brand-title">신뢰</h3>
-          <p class="brand-description">투명한 데이터 처리와 예측 가능한 동작으로 신뢰를 쌓습니다.</p>
+          <h3 class="brand-title">즉각 반응</h3>
+          <p class="brand-description">입력과 결과 사이의 지연을 최소화했습니다.</p>
         </article>
 
-        <!-- 카드 2: 단순함 -->
         <article class="brand-item">
-          <svg class="icon" viewBox="0 0 96 96" role="img" aria-label="단순함 아이콘">
-            <rect x="14" y="22" width="68" height="52" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
-            <line x1="26" y1="36" x2="70" y2="36" stroke="#1d4ed8" stroke-width="5" stroke-linecap="round"/>
-            <line x1="26" y1="48" x2="54" y2="48" stroke="#1d4ed8" stroke-width="5" stroke-linecap="round"/>
+          <svg class="icon" viewBox="0 0 96 96" role="img" aria-label="정확성 아이콘">
+            <rect x="16" y="22" width="64" height="52" rx="10" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
+            <path d="M30 48l12 12 24-24" fill="none" stroke="#1d4ed8" stroke-width="5" stroke-linecap="round"/>
           </svg>
-          <h3 class="brand-title">단순함</h3>
-          <p class="brand-description">필요한 것만 남기고 나머지는 과감히 덜어냅니다.</p>
+          <h3 class="brand-title">정확한 결과</h3>
+          <p class="brand-description">일관된 규칙과 검증된 로직으로 신뢰를 제공합니다.</p>
         </article>
 
-        <!-- 카드 3: 접근성 -->
         <article class="brand-item">
           <svg class="icon" viewBox="0 0 96 96" role="img" aria-label="접근성 아이콘">
-            <circle cx="48" cy="28" r="10" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
-            <path d="M20 38h56M32 48l-6 28M64 48l6 28M48 46v30" stroke="#1d4ed8" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <circle cx="48" cy="26" r="10" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
+            <path d="M18 38h60M32 48l-6 28M64 48l6 28M48 46v30" stroke="#1d4ed8" stroke-width="4" stroke-linecap="round" fill="none"/>
           </svg>
-          <h3 class="brand-title">접근성</h3>
-          <p class="brand-description">더 많은 사용자가 편히 쓸 수 있도록 기준을 따릅니다.</p>
+          <h3 class="brand-title">접근성 준수</h3>
+          <p class="brand-description">iPad, 모바일, 데스크톱에서 편안한 사용성.</p>
+        </article>
+
+        <article class="brand-item">
+          <svg class="icon" viewBox="0 0 96 96" role="img" aria-label="보안 아이콘">
+            <path d="M48 16l24 10v18c0 17-10.6 32.4-24 36C34.6 76.4 24 61 24 44V26l24-10z"
+                  fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
+            <path d="M36 48l10 10 18-18" fill="none" stroke="#1d4ed8" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+          <h3 class="brand-title">보안/안정</h3>
+          <p class="brand-description">기본을 지키는 설계로 장애를 줄였습니다.</p>
         </article>
       </div>
     </section>
 
-    <!-- 연락/CTA -->
-    <section aria-labelledby="contact-title" style="max-width:40rem;margin:2rem auto 0 auto;">
+    <!-- VALUES -->
+    <section id="values" aria-labelledby="value-title" style="max-width:64rem;margin:2rem auto 0 auto;">
+      <h2 id="value-title" class="section-title">우리의 가치와 목표</h2>
+      <div class="value-goals-box">
+        <p style="text-align:center;color:#374151;">
+          핵심 가치: <span class="highlight">간결함</span>, <span class="highlight">신뢰성</span>, <span class="highlight">접근성</span>
+        </p>
+        <ul class="value-goals-list">
+          <li>작업 맥락에 최적화된 화면 흐름</li>
+          <li>예측 가능한 상호작용과 가이드</li>
+          <li>반복 업무의 단계를 줄이는 자동화</li>
+          <li>시각적 위계와 적정 여백으로 피로도 최소화</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MISSION -->
+    <section id="mission" aria-labelledby="mission-title" style="max-width:64rem;margin:2rem auto 0 auto;">
+      <h2 id="mission-title" class="section-title">미션</h2>
+      <div class="mission-box">
+        <p style="text-align:center;color:#111827;margin:0;">
+          <strong class="highlight">“사용자의 시간을 아끼는 최고의 기본 경험 제공”</strong>
+        </p>
+        <p class="mission-list" style="margin-top:0.75rem;">
+          작은 클릭 수, 빠른 피드백, 안정적인 성능으로 미션을 실천합니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- SHOWCASE -->
+    <section id="showcase" aria-labelledby="showcase-title" style="max-width:64rem;margin:2rem auto 0 auto;">
+      <h2 id="showcase-title" class="section-title">화면 미리보기</h2>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem;">
+        <figure style="flex:1 1 20rem;min-width:20rem;margin:0;">
+          <svg class="image-style" viewBox="0 0 800 520" role="img" aria-label="화면 1" style="width:100%;height:auto;">
+            <rect width="800" height="520" rx="20" fill="#ffffff"/>
+            <rect x="36" y="36" width="728" height="64" rx="12" fill="#dbeafe"/>
+            <rect x="36" y="120" width="220" height="364" rx="16" fill="#eff6ff"/>
+            <rect x="276" y="120" width="488" height="172" rx="16" fill="#f3f4f6"/>
+            <rect x="276" y="312" width="488" height="172" rx="16" fill="#f3f4f6"/>
+          </svg>
+          <figcaption style="text-align:center;color:#6b7280;margin-top:0.5rem;">대시보드 레이아웃</figcaption>
+        </figure>
+        <figure style="flex:1 1 20rem;min-width:20rem;margin:0;">
+          <svg class="image-style" viewBox="0 0 800 520" role="img" aria-label="화면 2" style="width:100%;height:auto;">
+            <rect width="800" height="520" rx="20" fill="#ffffff"/>
+            <rect x="36" y="36" width="728" height="64" rx="12" fill="#dbeafe"/>
+            <rect x="36" y="120" width="728" height="364" rx="16" fill="#f3f4f6"/>
+            <rect x="72" y="156" width="660" height="80" rx="12" fill="#eff6ff"/>
+            <rect x="72" y="256" width="660" height="80" rx="12" fill="#eff6ff"/>
+            <rect x="72" y="356" width="660" height="80" rx="12" fill="#eff6ff"/>
+          </svg>
+          <figcaption style="text-align:center;color:#6b7280;margin-top:0.5rem;">리스트/폼 화면</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CONTACT / CTA -->
+    <section id="contact" aria-labelledby="contact-title" style="max-width:40rem;margin:2rem auto 0 auto;">
       <h2 id="contact-title" class="section-title">지금 시작해 보세요</h2>
       <div class="mission-box" style="padding:2rem;">
         <p class="mission-list" style="margin:0;">
-          베타 테스트 신청 또는 데모가 필요하시면 <span class="highlight">contact@example.com</span> 으로 연락 주세요.
+          데모 또는 베타 테스트 신청: <span class="highlight">contact@example.com</span>
         </p>
+        <!-- 간단 입력 폼(인라인 스타일만 사용) -->
+        <form onsubmit="event.preventDefault(); alert('신청이 접수되었습니다. 곧 연락드릴게요!');" style="display:flex;gap:0.5rem;margin-top:1rem;justify-content:center;flex-wrap:wrap;">
+          <input type="email" required placeholder="이메일 주소"
+                 style="flex:1 1 16rem;min-width:16rem;padding:0.75rem 0.9rem;border:1px solid #93c5fd;border-radius:0.5rem;outline:none;" />
+          <button type="submit"
+                  style="padding:0.75rem 1rem;border-radius:0.5rem;background:#1d4ed8;color:#fff;font-weight:700;border:none;">
+            신청하기
+          </button>
+        </form>
       </div>
     </section>
+
   </main>
 
-  <footer style="max-width:64rem;margin:2rem auto 3rem auto;text-align:center;color:#6b7280;">
-    © <span id="year"></span> 서비스 이름. All rights reserved.
+  <!-- =======================
+       Footer
+  ======================== -->
+  <footer style="border-top:1px solid #e5e7eb;background:#ffffff;">
+    <div style="max-width:64rem;margin:0 auto;padding:1.25rem 1rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between;">
+      <small style="color:#6b7280;">© <span id="year"></span> Service Name. All rights reserved.</small>
+      <div style="display:flex;gap:1rem;">
+        <a href="#" style="color:#374151;">이용약관</a>
+        <a href="#" style="color:#374151;">개인정보처리방침</a>
+        <a href="#" style="color:#374151;">문의하기</a>
+      </div>
+    </div>
   </footer>
 
   <script>
-    // 간단한 연도 표기
+    // 연도 표기
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 스크롤 시 헤더 그림자 효과
+    const header = document.querySelector('header');
+    const onScroll = () => {
+      if (window.scrollY > 6) {
+        header.style.boxShadow = '0 8px 20px rgba(0,0,0,0.06)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    };
+    document.addEventListener('scroll', onScroll, { passive: true });
+
+    // 앵커 부드러운 스크롤
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id.length > 1) {
+          e.preventDefault();
+          document.querySelector(id)?.scrollIntoView({ behavior:'smooth', block:'start' });
+        }
+      });
+    });
   </script>
 </body>
 </html>
